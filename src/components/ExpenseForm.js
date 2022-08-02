@@ -35,21 +35,32 @@ function ExpenseForm()
             ...inputData,
             date : dat
          })
+
+    }
+    const submitForm = (event) => {
+           event.preventDefault();
+           const expenseData = inputData;
+           console.log(expenseData);
+           setInputData({
+            title : '',
+            amount : '',
+            date: ''
+           })
     }
     return(
-        <form>
+        <form onSubmit={submitForm}> 
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Title</label>
-                    <input type='text' onChange={inputTitle}/>
+                    <input type='text' onChange={inputTitle} value={inputData.title}/>
                 </div>
                 <div className='new-expense__control' >
                     <label>Amount</label>
-                    <input type='number' min='0,01' step='0,01' onChange={inputAmount}/>
+                    <input type='number' min='0,01' step='0,01' onChange={inputAmount} value={inputData.amount}/>
                 </div>
                 <div className='new-expense__control'>
                     <label>Date</label>
-                    <input type='date' min='2019-01-01' max='2022-12-31' onChange={inputDate}/>
+                    <input type='date' min='2019-01-01' max='2022-12-31' onChange={inputDate} value={inputData.date}/>
                 </div>
             </div>
             <div className='new-expense__actions'>
