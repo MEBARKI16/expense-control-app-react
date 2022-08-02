@@ -22,9 +22,10 @@ function ExpenseForm()
     const inputAmount = (event) => {
         const amoun = event.target.value;
       //  setAmount(amoun);
-      setInputData({
-        ...inputData,
-        amount : amoun
+      setInputData((inputData) => {
+        return{
+             ...inputData,
+        amount : amoun}
      })
     }
     const inputDate = (event) => {
