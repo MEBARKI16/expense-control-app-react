@@ -1,9 +1,13 @@
 import './NewExpense.css'
 import ExpenseForm from './ExpenseForm';
-function NewExpense()
+function NewExpense(props)
 {
+    const receivetoformdata = x => {
+      const  data = x;
+        props.receivetonewxpense(data);
+    }
     return <div className="new-expense">
-       <ExpenseForm/>
+       <ExpenseForm receivetoform={receivetoformdata}/>
     </div>;
 }
 export default NewExpense;
