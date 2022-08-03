@@ -30,7 +30,6 @@ function ExpenseForm(props)
     }
     const inputDate = (event) => {
          const dat = event.target.value;
-        // setDate(dat);
         setInputData({
             ...inputData,
             date : dat
