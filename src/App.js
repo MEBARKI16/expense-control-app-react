@@ -33,10 +33,10 @@ const receivedata = data => {
     id : Math.random()
   }
   console.log(datas);
-  setExpenses([datas, ...expenses])
-  console.log(expenses);
-}
+  setExpenses([datas, ...expenses]);
   
+}
+  console.log(expenses);
   return (
     <div>
     <NewExpense receivetonewxpense={receivedata}/>
