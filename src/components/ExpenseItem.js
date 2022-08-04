@@ -7,14 +7,14 @@ const date = props.date;
 const title = props.title;
 const [title1,updtitle] = useState(title);
 const price = props.amount;
-    return (
+    return ( <li>
         <Card className='expense-item'>
           <ExpenseDate date={date}/>
             <div className='expense-item__description'>
                 <h2>{title1}</h2>
                 <div className='expense-item__price'>${price}</div>
             </div>
-        </Card>
+        </Card></li>
     )
 };
 export default ExpenseItem;

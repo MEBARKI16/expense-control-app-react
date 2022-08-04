@@ -1,6 +1,7 @@
 import ExpenseItem from "./components/ExpenseItem";
 import './Expense.css'
 import Card from './Card'
+import ExpenseList from './ExpenseList'
 function Expense(props){
    const expenses = props.expense;
     let x;
@@ -8,7 +9,7 @@ function Expense(props){
    else { x = expenses.map(x => <ExpenseItem key={x.id} title={x.title} amount={x.amount} date={x.date}/>)}
     return(
         <Card className="expenses">
-            {x}       
+            <ExpenseList item={expenses} />     
         </Card>
     )
 }
